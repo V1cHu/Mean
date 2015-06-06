@@ -1,8 +1,9 @@
 {
-    "name" : "myMEANapplication",
-    "version" : "1.0.0",
-    "dependencies" : {
-        "express" : "latest",
-        "gulp" : "latest"
-    }
+  "name": "myMEANapplication",
+  "version": "1.0.0",
+  "dependencies": {
+    "connect": "^3.3.5",
+    "express": "latest",
+    "gulp": "latest"
+  }
 }
