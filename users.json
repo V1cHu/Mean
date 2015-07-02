@@ -1,0 +1,27 @@
+{
+    "users": [{
+        "fname": "Robert",
+        "lname": "Downey Jr.",
+        "password": "ironman"
+    }, {
+        "fname": "Chris",
+        "lname": "Evans",
+        "password": "cap"
+    }, {
+        "fname": "Chris",
+        "lname": "Hemsworth",
+        "password": "thor"
+    }, {
+        "fname": "Jeremy",
+        "lname": "Renner",
+        "password": "hawk"
+    }, {
+        "fname": "Mark",
+        "lname": "Ruffalo",
+        "password": "hulk"
+    }, {
+        "fname": "Scarlett",
+        "lname": "Johansson",
+        "password": "widow"
+    }]
+}

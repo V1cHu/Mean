@@ -1,0 +1,9 @@
+<form class="form-signin">
+    <h2 class="form-signin-heading">Please sign in</h2>
+    <input type="text" class="form-control" ng-model="user.fname" placeholder="First Name" required autofocus></input>
+    <input type="password" class="form-control" ng-model="user.password" placeholder="Password" required></input>
+    <button type="submit" ng-click="login()" class="btn btn-lg btn-primary btn-block">Login</button>
+    <font color="red">
+        <h4>{{information}}</h4>
+    </font>
+</form>

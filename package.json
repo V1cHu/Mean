@@ -1,10 +1,15 @@
 {
-  "name": "myMEANapplication",
+  "name": "mydemoapp",
   "version": "1.0.0",
+  "description": "My app which uses the MEAN stack.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vishnu Ramana J",
+  "license": "ISC",
   "dependencies": {
-    "connect": "^3.3.5",
-    "ejs": "^2.3.1",
-    "express": "latest",
-    "gulp": "latest"
+    "body-parser": "^1.13.1",
+    "express": "^4.13.0"
   }
 }

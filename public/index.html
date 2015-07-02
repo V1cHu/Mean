@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Testing my Angular knowledge">
+    <meta name="author" content="Vishnu Ramana J">
+    <title>Angular Test App</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controllers/MainCtrl.js"></script>
+    <script src="app/controllers/HomeCtrl.js"></script>
+    <script src="app/controllers/AddCtrl.js"></script>
+    <script src="app/controllers/EditCtrl.js"></script>
+    <script src="app/services/UserService.js"></script>
+    <link rel="stylesheet" href="css/signin.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <a class="navbar-brand" href="#/home">The Avengers</a>
+        </div>
+    </nav>
+    <div class="container">
+        <ng-view></ng-view>
+    </div>
+</body>
+
+</html>

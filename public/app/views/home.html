@@ -1,0 +1,24 @@
+<div class="col-md-4 col-md-offset-4">
+    <table class="table table-bordered table-striped table-centered">
+        <caption>The Avengers</caption>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="user in users ">
+                <td>{{user.fname}}</td>
+                <td>{{user.lname}}</td>
+                <td>
+                    <input type="button" class="btn btn-primary btn-xs" ng-click="edit($index)" value="Edit"></input>
+                    <input type="button" class="btn btn-primary btn-xs" ng-click="delete($index)" value="Delete"></input>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <input type="button" class="btn btn-primary btn-xs" ng-click="add($index)" value="Add"></input>
+    <input type="button" class="btn btn-primary btn-xs" ng-click="logout()" value="Logout"></input>
+</div>
