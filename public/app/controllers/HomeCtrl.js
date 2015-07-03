@@ -10,19 +10,18 @@ app.controller('HomeCtrl', function($rootScope, $http, $scope, $location, $route
         var users;
 
         $http.get('/list').success(function(data) {
-            console.log("list obtained");
             users = data;
             $scope.users = users;
         }).error(function(data) {
-            console.log("cannot get list");
+            console.log("ERROR: Cannot get list from server!");
         });
 
         $scope.delete = function($index) {
-            UserService.delete($index);
+            console.log($index);
         }
 
         $scope.edit = function($index) {
-            $location.path('/edit' + $index);
+            $location.path('/edit/' + $index);
         }
         $scope.add = function() {
             $location.path('/add');

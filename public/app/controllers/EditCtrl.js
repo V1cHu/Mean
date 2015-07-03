@@ -1,18 +1,22 @@
-app.controller('EditCtrl', function($rootScope, $scope, $location, $routeParams, UserService) {
+app.controller('EditCtrl', function($rootScope, $http, $scope, $location, $routeParams, UserService) {
 
     if ($rootScope.isLoggedIn == true) {
-        var users = UserService.list();
-        $scope.users = users;
 
         var index = $routeParams.param;
-        console.log(index)
 
         var user = {
-            'fname': users[index].fname,
-            'lname': users[index].lname,
+            'fname': '',
+            'lname': '',
             'password': ''
         };
-        $scope.user = user;
+        $http.get('/edit/' + index).success(function(data) {
+            user = data;
+            user.password = '';
+            $scope.user = user;
+        }).error(function(data) {
+            console.log(date);
+        });
+
 
         $scope.cancel = function() {
             $rootScope.isLoggedIn = true;

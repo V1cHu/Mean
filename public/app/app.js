@@ -15,7 +15,7 @@ app.config(['$routeProvider', function($routeProvider) {
             templateUrl: 'app/views/add.html',
             controller: 'AddCtrl'
         })
-        .when('/edit:param', {
+        .when('/edit/:param', {
             templateUrl: 'app/views/edit.html',
             controller: 'EditCtrl'
         }).

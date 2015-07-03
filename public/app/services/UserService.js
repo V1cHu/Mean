@@ -1,5 +1,5 @@
 app.service('UserService', function() {
-
+    
     var users = [{
         'fname': 'Robert',
         'lname': 'Downey Jr.',
@@ -48,7 +48,6 @@ app.service('UserService', function() {
     this.delete = function(index) {
         users.splice(index, 1);
     }
-
 
     this.list = function() {
         return users;
