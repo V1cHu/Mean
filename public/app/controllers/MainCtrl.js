@@ -10,7 +10,7 @@ app.controller('MainCtrl', function($rootScope, $http, $scope, $location, UserSe
                 $rootScope.isLoggedIn = true;
                 $location.path('/home');
             } else {
-                $scope.information = "Username/Password is invalid!"
+                $scope.information = "Username/Password is invalid!";
             }
         }).error(function(data) {
             $location.path('/login');

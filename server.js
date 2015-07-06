@@ -34,12 +34,19 @@ app.post('/login', function(req, res) {
 
 app.get('/edit/:index', function(req, res) {
     console.log("index===" + req.params.index);
-    res.send(getList().users[req.params.index]);
+    var result = getList().users[req.params.index];
+    console.log(result);
+    res.send(result);
+});
+
+app.put('/edit/:index/save', function(req, res) {
+    console.log('save index' + req.params.index);
+    console.log(req.body);
+    res.send('success');
 });
 
 app.get('/list', function(req, res) {
     var file = getList();
-    console.log(file);
     res.send(file.users);
 });
 

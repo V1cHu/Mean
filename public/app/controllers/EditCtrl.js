@@ -30,9 +30,17 @@ app.controller('EditCtrl', function($rootScope, $http, $scope, $location, $route
             if (user.fname != 'undefined' && user.lname != 'undefined' &&
                 user.password != 'undefined' && user.fname != '' && user.lname != '' &&
                 user.password != '') {
-                UserService.save(user, index);
-                $rootScope.isLoggedIn = true;
-                $location.path('/home');
+
+                $http.put('/edit/' + index + '/save', user).success(function(data) {
+                    console.log(data);
+                    $rootScope.isLoggedIn = true;
+                    $location.path('/home');
+
+                }).error(function(data) {
+                    console.log(data);
+                });
+
+
             }
         }
     } else {
